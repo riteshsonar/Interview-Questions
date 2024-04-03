@@ -1,5 +1,7 @@
 STRING
+
     How to you print duplicate character from a string ?
+    
 
      fun printDuplicateCharacters(str: String) {
          val charCount = HashMap<Char, Int>()
