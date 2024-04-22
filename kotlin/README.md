@@ -221,8 +221,10 @@
         val person = Person()
         person.name = "Vamsi"
         performFunction {
+            
             println("Created a person with name: ${person.name}")
     //        return  // Not allowed here as its crossinline
+
         }
     }
 
