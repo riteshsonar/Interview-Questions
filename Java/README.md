@@ -258,24 +258,24 @@
     }
   ```
   
--**How HashMap internaly work?**<br>
-  A) Java HashMap internally uses an array and a linkedList data stucture to store key-value pairs when a key-value pair is inserted into a HashMap, the hasah funtion calculate a hashCode for the key.This hash code is then used to determine the index in the array where the key-value pair should be stored. the formula for calculating the index is 
+- **How HashMap internaly work?**<br>
+    A) Java HashMap internally uses an array and a linkedList data stucture to store key-value pairs when a key-value pair is inserted into a HashMap, the hasah funtion calculate a hashCode for the key.This hash code is then used to determine the index in the array where the key-value pair should be stored. the formula for calculating the index is <br>
 
-  Index = HashCode(key) & (n-1)
+    Index = HashCode(key) & (n-1)
 
-  where n is the size of the array. For exmaple if the HashMap has a defalut size of 16, and you want to insert three-key pairs the index value for the first pair would be.
+    where n is the size of the array. For exmaple if the HashMap has a defalut size of 16, and you want to insert three-key pairs the index value for the first pair would be.<br>
 
-   Index = 2657860 & (16-1) = 4
+    Index = 2657860 & (16-1) = 4
 
-  The HashMap maintains an array also called a "bucket array" with each index position acting as a bucket Each bucket can hold mutliple node object using a linked list.
+    The HashMap maintains an array also called a "bucket array" with each index position acting as a bucket Each bucket can hold mutliple node object using a linked list.
 
-  Here are some other things to know about HashMaps:
-   a) The default size of a HashMap is 16.
-   b) Duplicate keys are not allowed.
-   c) A HashMap is resized when it's about to get full, and its capacity is always doubled when it's resized.
-   d) The load factor determines when a HashMap will be resized. For example, if the current capacity is 16 and the load factor 
-        is 0. 75, then the HashMap will be resized when it has 12 elements.
-   e) The put() API is used to store a key-value pair.
+    Here are some other things to know about HashMaps:<br>
+     a) The default size of a HashMap is 16.<br>
+     b) Duplicate keys are not allowed.<br>
+     c) A HashMap is resized when it's about to get full, and its capacity is always doubled when it's resized.<br>
+     d) The load factor determines when a HashMap will be resized. For example, if the current capacity is 16 and the load factor<br>
+        is 0. 75, then the HashMap will be resized when it has 12 elements.<br>
+     e) The put() API is used to store a key-value pair.<br>
 
 - **Does HashMap maintains Order in which items are inserted?** <br>
   A) No. We have to use LinkedHashMap to maintain the order.
