@@ -258,8 +258,8 @@
     }
   ```
   
-- **How HashMap internaly work?**<br>
-    A) Java HashMap internally uses an array and a linkedList data stucture to store key-value pairs when a key-value pair is inserted into a HashMap, the hasah funtion calculate a hashCode for the key.This hash code is then used to determine the index in the array where the key-value pair should be stored. the formula for calculating the index is <br>
+- **How HashMap internaly work?** <br>
+    Java HashMap internally uses an array and a linkedList data stucture to store key-value pairs when a key-value pair is inserted into a HashMap, the hasah funtion calculate a hashCode for the key.This hash code is then used to determine the index in the array where the key-value pair should be stored. the formula for calculating the index is <br>
 
     Index = HashCode(key) & (n-1)
 
