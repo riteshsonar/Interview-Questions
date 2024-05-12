@@ -271,7 +271,6 @@
 
     Index = 2657860 & (16-1) = 4
 
-    The HashMap maintains an array also called a "bucket array" with each index position acting as a bucket Each bucket can hold mutliple node object using a linked list.
 
     Here are some other things to know about HashMaps:
      a) The default size of a HashMap is 16.
@@ -280,7 +279,6 @@
      d) The load factor determines when a HashMap will be resized. For example, if the current capacity is 16 and the load factor 
         is 0. 75, then the HashMap will be resized when it has 12 elements.
      e) The put() API is used to store a key-value pair.
-
 
 - **What is a LinkedHashMap?** <br>
   A) LinkedHashMap maintains the order in which items are inserted. LinkedHashMap is same as HashMap - non-synchronized and contains one Null Key and multiple Null Values, the additional feature is it maintains insertion order.
