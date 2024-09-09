@@ -495,6 +495,4 @@ More additional info to get started with RxJava is available at:
 
 -   **Hot Observables vs Cold Observables**<br/>
 
-
-
 -   **Explain about reactive programming?**<br/>
