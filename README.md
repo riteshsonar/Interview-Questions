@@ -20,13 +20,30 @@ Quick Jump to Topics:
 -   **What are SOLID Principles? How they are applicable in Android?**<br/>
     A) SOLID unites all the best practices of software development over the years to deliver good quality apps. Understanding SOLID Principles will help us write clean and elegant code. It helps us write the code with SOC (Separation of Concerns).
     SOLID Principles is an acronym for:
-    1. S stands for Single Responsibility Principle(SRP) - A class should have only one reason to change
-    2. O stands for Open Closed Principle - Software entities such as classes, functions, modules should be open for extension but closed for modification.
-    3. L stands for Liskov Substitution Principle - Derived class must be usable through the base class interface, without the need for user to know the difference.
-    4. I stands for Interface Segregation - No client should be forced to depend on methods that it doesn't use.
-    5. D stands for Dependency Inversion - 
-       1. High Level Modules should not directly depend on Low level modules. Instead both should depend on abstractions.
-       2. Abstractions should not depend on details. Details should depend on abstractions.
+    1. S - Single Responsibility Principle (SRP):
+    Definition: A class should have only one reason to change, meaning it should only have one job or responsibility.
+
+    Example: If you have a User class, it should only handle user-related tasks (e.g., storing user details) and not tasks like saving the user to a database. For saving to a database, you should use a separate UserRepository class.
+
+    2. O - Open/Closed Principle (OCP):
+    Definition: Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+
+    Example: You can extend a class's behavior by adding new functionality without altering existing code. For instance, if you have a Shape class with a method to calculate the area, you shouldn't modify the class when adding a new shape (like Circle or Rectangle). Instead, you should extend the class.
+
+    3. L - Liskov Substitution Principle (LSP):
+    Definition: Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+
+    Example: If Bird is a superclass and Penguin is a subclass, you should ensure that replacing Bird with Penguin doesn’t break any functionality in your system. If a method expects a Bird, it should work with any subclass of Bird, including Penguin.
+
+    4. I - Interface Segregation Principle (ISP):
+    Definition: No client should be forced to depend on methods it does not use. Instead of one large interface, many small interfaces should be created based on specific client needs.
+
+    Example: Instead of having a large Animal interface with methods like run(), fly(), and swim(), split it into smaller interfaces like Runnable, Flyable, and Swimmable. A Dog class would implement Runnable but not Flyable.
+
+    5. D - Dependency Inversion Principle (DIP):
+    Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions (interfaces). Also, abstractions should not depend on details. Details should depend on abstractions.
+
+    Example: A class like Car should depend on an abstract Engine interface, not a concrete DieselEngine class. This allows you to change the engine type easily without modifying the Car class.
 
     [Learn More about SOLID principles with Android Examples Here.](https://www.coderefer.com/blog/solid-principles-in-android-with-kotlin-examples/)
 
@@ -112,6 +129,7 @@ Quick Jump to Topics:
 
 -   **What is HandlerThread?**<br/>
     A) HandlerThread is a Handy class to start a thread that has a Looper.
+        When you need to perform work in the background (e.g., network operations, file I/O, etc.), and you also need to communicate with the main thread or other threads, HandlerThread can be used. It gives you a thread with its own Looper, allowing you to manage tasks more efficiently.
 
 -   **What is a Looper?**<br/>
     A) A Looper is a class used to loop through the Message Queue attached to the Thread. Any thread consists of only one looper.
