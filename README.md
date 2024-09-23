@@ -44,6 +44,7 @@ Quick Jump to Topics:
     Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions (interfaces). Also, abstractions should not depend on details. Details should depend on abstractions.
 
     Example: A class like Car should depend on an abstract Engine interface, not a concrete DieselEngine class. This allows you to change the engine type easily without modifying the Car class.
+    
 
     [Learn More about SOLID principles with Android Examples Here.](https://www.coderefer.com/blog/solid-principles-in-android-with-kotlin-examples/)
 
